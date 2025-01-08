@@ -1,0 +1,12 @@
+parameters:
+    level: 3
+    # Путь к папке с исходниками
+    paths:
+        - src
+
+    # Путь к папке, которую нужно исключить из анализа
+    excludes_analyse:
+        - tests/*
+        - vendor/*
+        - .git/*
+        - node_modules/*

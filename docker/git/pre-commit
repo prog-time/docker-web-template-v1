@@ -1,0 +1,19 @@
+#!/bin/sh
+
+echo "Запуск проверок перед commit..."
+
+# Запуск анализа кода
+if ! ./vendor/bin/phpstan analyse; then
+    echo "Ошибка: Анализ нашёл ошибки в коде!"
+    echo "Операция прервана!"
+    exit 1
+fi
+
+# Code style
+if ! ./vendor/bin/php-cs-fixer fix --dry-run --diff; then
+    echo "Ошибка: нарушение стиля кода!"
+    echo "Операция прервана!"
+    exit 1
+fi
+
+echo "Все проверки пройдены. Продолжаем commit..."

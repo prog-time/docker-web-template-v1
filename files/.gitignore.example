@@ -1,0 +1,102 @@
+# ОС
+#########################
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# Общие временные файлы
+#########################
+*.tmp
+*.temp
+*.log
+*.swp
+*.swo
+*.bak
+*.old
+*.txt
+
+# Node.js
+#########################
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Composer (PHP)
+#########################
+vendor/
+composer.lock
+
+# Laravel (PHP)
+#########################
+/bootstrap/cache/
+/storage/*.key
+/storage/app/public/
+/storage/framework/sessions/
+/storage/framework/views/
+/storage/framework/cache/data/
+
+# Python
+#########################
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Database
+#########################
+*.sqlite
+*.sqlite3
+*.db
+*.sql
+*.pdb
+
+# Среда разработки (IDE)
+#########################
+# VS Code
+.vscode/
+
+# JetBrains (IntelliJ, PHPStorm, PyCharm, etc.)
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# NetBeans
+nbproject/
+nbproject/private/
+build/
+dist/
+
+# Sublime Text
+*.sublime-workspace
+
+# Конфигурации CI/CD
+#########################
+# GitHub Actions
+!.github/workflows/
+
+# Docker
+#########################
+**/.env
+docker-compose.override.yml
+.env.*
+.env.local

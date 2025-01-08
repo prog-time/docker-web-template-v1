@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Определяем имя вашего Docker образа
+IMAGE_NAME="myapp"
+
+# Функция для проверки статуса сборки
+if ! docker-compose down; then
+    echo "Ошибка: Анализ нашёл ошибки в коде!"
+    echo "Операция прервана!"
+    exit 1
+fi
+
+# Функция для проверки статуса сборки
+if ! docker-compose up -d --build; then
+    echo "Ошибка: Анализ нашёл ошибки в коде!"
+    echo "Операция прервана!"
+    exit 1
+fi
+
+# Функция для проверки статуса сборки
+if ! docker-compose ps; then
+    docker-compose logs
+    echo "Ошибка: Анализ нашёл ошибки в коде!"
+    echo "Операция прервана!"
+    exit 1
+fi
+
+echo "Сборка Docker прошла успешно. Пуш может быть выполнен."
