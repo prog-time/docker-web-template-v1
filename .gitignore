@@ -2,3 +2,4 @@ postgres
 grafana
 .git/
 .env
+www/public/*
